@@ -3,6 +3,7 @@
 
 from melons import melon_names, melon_seedlessness, melon_prices
 
+
 def melon_dict(names, seedless, prices):
     '''convert current melon data into dictionary'''
     melon_dict = {}
@@ -11,18 +12,7 @@ def melon_dict(names, seedless, prices):
     return melon_dict
 
 melon_dict = melon_dict(melon_names, melon_seedlessness, melon_prices)
-
-def add_attribute_to_dict(current_dict, new_attributes):
-    '''adds a new attribute and value to an existing dictionary for a specific key'''
-    for each_item in current_dict:
-        for attribute in new_attributes:
-            current_dict[each_item][attribute] = None
-    return current_dict
-
-new_attr = ['flesh_color', 'rind_color', 'weight']
-
-print(add_attribute_to_dict(melon_dict, new_attr))
-
+print(melon_dict)
 
 
 def print_melon(name, seedless, price):
